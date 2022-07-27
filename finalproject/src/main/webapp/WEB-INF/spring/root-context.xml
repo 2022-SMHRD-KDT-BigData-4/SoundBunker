@@ -4,5 +4,28 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-		
+		 <!-- DB정보를 담고있는 객체 -->
+        <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="jdbcUrl" value="jdbc:mysql://project-db-stu.ddns.net:3307/BPM"></property>
+        <property name="username" value="BPM"></property>
+        <property name="password" value="12345"></property>
+        </bean>
+        
+        <!-- 커넥션 풀 생성을 도울 객체 생성 -->
+        <!--HikariCP Configration-->
+        <!-- Connection들을 가지고 있는 DBCP -->
+        <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <constructor-arg ref="hikariConfig"/>
+        </bean>
+        
+        <!-- 커넥션과 Mapper객체들을 관리할 sqlSessionFactory 객체 생성 -->
+        <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        </bean>
+        
+        <!-- ************************ -->
+        <!-- mapper가 있는 패키지 스캔해서 interface를 완전한 객체로 만들어줌 -->
+        <mybatis-spring:scan base-package="com.smhrd.mapper"/>
+        
 </beans>
