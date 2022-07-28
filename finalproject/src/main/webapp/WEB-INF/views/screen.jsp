@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="cam.css">
+    <link rel="stylesheet" href="screen.css">
     <link rel="stylesheet" href="player.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -143,7 +143,7 @@
         justify-content: space-around;
         margin-left: 55%;
         position: relative;
-        left: -33%;
+        left: -32.5%;
     }
 
     .music__control i {
@@ -343,7 +343,7 @@
     </div>
 
 </body>
-<script src="cam.js"></script>
+<script src="screen.js"></script>
 <script src="/Front/musicplayer/api/music.js"></script>
 <script>
     
@@ -519,64 +519,64 @@
     })
 
     // 뮤직 리스트 구현하기
-    // for (let i = 0; i < allMusic.length; i++) {
-    //     let li = `
-    //             <li data-index="${i + 1}">
-    //                 <div>
-    //                     <em>${allMusic[i].name}</em>
-    //                     <p>${allMusic[i].artist}</p>
-    //                 </div>
-    //                 <audio class="${allMusic[i].audio}" src="/Front/musicplayer/songs/${allMusic[i].audio}.mp3"></audio>
-    //                 <span id="${allMusic[i].audio}" class="audio-duration">3:36</span>
-    //             </li>
-    //         `;
-    //     musicListUl.insertAdjacentHTML("beforeend", li);
+    for (let i = 0; i < allMusic.length; i++) {
+        let li = `
+                <li data-index="${i + 1}">
+                    <div>
+                        <em>${allMusic[i].name}</em>
+                        <p>${allMusic[i].artist}</p>
+                    </div>
+                    <audio class="${allMusic[i].audio}" src="/Front/musicplayer/songs/${allMusic[i].audio}.mp3"></audio>
+                    <span id="${allMusic[i].audio}" class="audio-duration">3:36</span>
+                </li>
+            `;
+        musicListUl.insertAdjacentHTML("beforeend", li);
 
-    //     let liAudioDuration = musicListUl.querySelector(`#${allMusic[i].audio}`);
-    //     let liAudio = musicListUl.querySelector(`.${allMusic[i].audio}`);
+        let liAudioDuration = musicListUl.querySelector(`#${allMusic[i].audio}`);
+        let liAudio = musicListUl.querySelector(`.${allMusic[i].audio}`);
 
-    //     liAudio.addEventListener("loadeddata", () => {
-    //         let audioDuration = liAudio.duration;
-    //         let totalMin = Math.floor(audioDuration / 60);
-    //         let totalSec = Math.floor(audioDuration % 60);
-    //         if (totalSec < 10) totalSec = `0${totalSec}`;
+        liAudio.addEventListener("loadeddata", () => {
+            let audioDuration = liAudio.duration;
+            let totalMin = Math.floor(audioDuration / 60);
+            let totalSec = Math.floor(audioDuration % 60);
+            if (totalSec < 10) totalSec = `0${totalSec}`;
 
-    //         liAudioDuration.innerText = `${totalMin}:${totalSec}`;
-    //         liAudioDuration.setAttribute("data-duration", `${totalMin}:${totalSec}`);
-    //     });
-    // }
+            liAudioDuration.innerText = `${totalMin}:${totalSec}`;
+            liAudioDuration.setAttribute("data-duration", `${totalMin}:${totalSec}`);
+        });
+    }
 
     // 뮤직 리스트 클릭하기
-    // const musicListAll = musicListUl.querySelectorAll("li");
+    const musicListAll = musicListUl.querySelectorAll("li");
 
 
 
-    // function playListMusic() {
-    //     for (let j = 0; j < musicListAll.length; j++) {
-    //         let audioTag = musicListAll[j].querySelector(".audio-duration");
-    //         let adDuration = audioTag.getAttribute("data-duration");
+    function playListMusic() {
+        for (let j = 0; j < musicListAll.length; j++) {
+            let audioTag = musicListAll[j].querySelector(".audio-duration");
+            let adDuration = audioTag.getAttribute("data-duration");
 
-    //         if (musicListAll[j].classList.contains("playing")) {
-    //             musicListAll[j].classList.remove("playing");
-    //             audioTag.innerText = adDuration;
-    //         }
+            if (musicListAll[j].classList.contains("playing")) {
+                musicListAll[j].classList.remove("playing");
+                audioTag.innerText = adDuration;
+            }
 
-    //         if (musicListAll[j].getAttribute("data-index") == musicIndex) {
-    //             musicListAll[j].classList.add("playing");
-    //             audioTag.innerText = "재생중";
-    //         }
-    //         musicListAll[j].setAttribute("onclick", "clicked(this)");
-    //     }
-    // }
+            if (musicListAll[j].getAttribute("data-index") == musicIndex) {
+                musicListAll[j].classList.add("playing");
+                audioTag.innerText = "재생중";
+            }
+            musicListAll[j].setAttribute("onclick", "clicked(this)");
+        }
+    }
 
-    // function clicked(el) {
-    //     let getLiIndex = el.getAttribute("data-index");
+    function clicked(el) {
+        let getLiIndex = el.getAttribute("data-index");
 
-    //     musicIndex = getLiIndex;
-    //     loadMusic(musicIndex);
-    //     playMusic();
-    //     playListMusic();
-    // }
+        musicIndex = getLiIndex;
+        loadMusic(musicIndex);
+        playMusic();
+        playListMusic();
+    }
     // 창이 열리면 노래 시작 
     
     window.addEventListener("load", () => {
@@ -589,8 +589,5 @@
 
 
 </script>
-
-
-</html>
 
 </html>
