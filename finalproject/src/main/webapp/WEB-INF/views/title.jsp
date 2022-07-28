@@ -6,10 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="2.5;url=/Front/temp/main.html">
+    <meta http-equiv="refresh" content="2.5;url=main2.do">
     <title>SoundBunker</title>
-    <link rel="stylesheet" href="title.css">
-    <link rel="stylesheet" href="darkmode.css">
+    <link rel="stylesheet" href="resources/css/title.css">
+    <link rel="stylesheet" href="resources/css/darkmode.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
 </head>
 
@@ -37,5 +37,5 @@
     <div class="cover"></div>
     
 </body>
-<script src="darkmode.js"></script>
+<script src="resources/js/darkmode.js"></script>
 </html>
