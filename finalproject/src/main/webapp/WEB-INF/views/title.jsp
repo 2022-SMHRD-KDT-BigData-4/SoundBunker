@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="2.5;url=main2.do">
+    <meta http-equiv="refresh" content="2.5;url=main.do">
     <title>SoundBunker</title>
     <link rel="stylesheet" href="resources/css/title.css">
     <link rel="stylesheet" href="resources/css/darkmode.css">

@@ -12,7 +12,7 @@ public class bpmController {
 		return "title";
 	}
 	
-	@RequestMapping("/main2.do")
+	@RequestMapping("/main.do")
 	public String main(Model model) {
 		return "main";
 	}
