@@ -112,14 +112,12 @@
                     <!-- li의 a 태그 id 바꿔야함 -->
                     <li class="category"><a id="gnb_category" href="#category">CATEGORY</a></li>
                     <li class="cammode"><a id="gnb_cammode" href="#cammode">CAMMODE</a></li>
-                    <li class="playlist"><a id="gnb_playlist" href="#playlist">PLAYLIST</a></li>
                     <li class="team"><a id="gnb_team" href="#team">BPMTEAM</a></li>
                 </ul>
             </div>
             <div class="navBtn">
                 <ul>
                     <li class="on"><a href="#none"></a></li>
-                    <li><a href="#none"></a></li>
                     <li><a href="#none"></a></li>
                     <li><a href="#none"></a></li>
                     <li><a href="#none"></a></li>
@@ -482,25 +480,6 @@
 
                             </div><button onclick="stop()" id="stop" style="display: none;">Stop time</button>
 
-                        </div>
-                    </div>
-
-                    <!-- 플레이리스트 -->
-                    <!-- id 설정 잘해야 스크롤 및 header 클릭시 움직임 -->
-                    <div class="mainBox mainBox_04" id="playlist" style="background-color: peachpuff;">
-                        <div class="conWrap">
-                            <div class="mainBoxText">
-                                <span class="block">뮤직 서비스, SOUNDBUNKER</span>
-                                <span class="engText">PLAYLIST</span>
-                            </div>
-                            <div class="mainBoxSubText modalBtn_4 modal_btn" id="more_upstream">
-                                <div class="textWrap">
-                                    당신의 <span>커리어</span>가<br>
-                                    다음 단계로<br>
-                                    성장합니다.
-                                </div>
-                                <div class="subText">자세히 보기</div>
-                            </div>
                         </div>
                     </div>
 
