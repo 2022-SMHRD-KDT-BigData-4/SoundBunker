@@ -159,9 +159,9 @@
 
                         <div class="conWrap">
                             <div class="mainText">
-                                서영 <span>넌</span>듣기만 해,<br>
-                                다음은 <span>교자</span>가<br>
-                                할게.
+                                편하게 <span>듣기만</span> 하세요,<br>
+                                다음은 <span>SoundBunker</span>가<br>
+                                할게요.
                             </div>
                             <div class="serviceSlot">l
                             </div>
@@ -239,7 +239,7 @@
                             </div>
                             <div class="mainBoxSubText modalBtn_2 modal_btn" id="more_distribution">
                                 <div class="textWrap" id="textWrap1">
-                                    당신이 듣고 싶은 음악을<br>
+                                    듣고 싶은 음악을<br>
                                     <span>직접</span>골라 <span>편의하게</span><br>
                                     감상해 보세요.
                                 </div>
@@ -468,15 +468,14 @@
                             </div>
                             <div class="mainBoxSubText modalBtn_3 modal_btn" id="more_marketing">
                                 <div class="textWrap">
-                                    당신의 음악으로<br>
-                                    향하는 <span>마케팅</span>이<br>
-                                    시작됩니다.
+                                    당신의 <span>움직임</span>이<br>
+                                    당신의 <span>음악</span>으로<br>
                                 </div>
                                 <script>
 
 
                                 </script>
-                                <div class="subText" id="subText2" onclick="start()">자세히 보기</div>
+                                <div class="subText" id="subText2" onclick="start()">시작하기</div>
 
                             </div><button onclick="stop()" id="stop" style="display: none;">Stop time</button>
 
@@ -487,17 +486,18 @@
                     <!-- id 설정 잘해야 스크롤 및 header 클릭시 움직임 -->
                     <div class="mainBox mainBox_05" id="team" style="background-color: cadetblue;">
                         <div class="conWrap">
-                            <div class="mainBoxText">
+                        <img src="resources/img/bpm.png" id="bpm_img">
+                            <div class="mainBoxText" id="mainBoxText3">
                                 <span class="block">뮤직 서비스, SOUNDBUNKER</span>
                                 <span class="engText">BPMTEAM</span>
                             </div>
                             <div class="mainBoxSubText modalBtn_5 modal_btn" id="more_subscription">
                                 <div class="textWrap">
-                                    베타 서비스<br>
-                                    기간에 <span>오즈</span>를<br>
-                                    무료로 만나보세요
+                                   
+                                     저희 <span>BPM</span>팀을<br>
+                                    소개합니다
                                 </div>
-                                <div class="subText">자세히 보기</div>
+                                <div class="subText" id="subText3">자세히 보기</div>
                             </div>
                         </div>
                     </div>

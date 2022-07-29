@@ -134,6 +134,16 @@ $(document).ready(function () {
             // 비디오 감추기
             $('#video').css({"opacity":"0"});
         }
+        if ($(document).scrollTop() < section4.top - 200) {
+            $('.nav ul li').removeClass('on');
+            $('.nav .playlist').addClass('on')
+            $('.scrollDown').css('display', 'block')
+            // $('.copyright').css('display', 'block')
+            // $('.credit').css('display', 'none')
+            $('#more_subscription').css({ "right": "0%" })
+            $('#mainBoxText3').css({ "left": "0%" })
+            $('#bpm_img').css({"left": "-70%"});
+        }
         if ($(document).scrollTop() > section5.top - 200) {
             $('.nav ul li').removeClass('on');
             $('.nav .team').addClass('on')
@@ -216,6 +226,14 @@ $(document).ready(function () {
         $('#more_marketing').css({ "right": "-580%" })
         $('#mainBoxText2').css({ "left": "580%" })
         $('#video').css({"opacity": "1"})
+    })
+    
+    
+    // 팀소개 자세히 보기 눌렀을 때 팀 사진과 설명 
+    $('#subText3').click(function () {
+        $('#more_subscription').css({ "right": "-580%" })
+        $('#mainBoxText3').css({ "left": "580%" })
+        $('#bpm_img').css({"left": "50%"});
     })
 
 
