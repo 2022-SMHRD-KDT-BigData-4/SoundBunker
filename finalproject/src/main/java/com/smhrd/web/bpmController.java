@@ -20,6 +20,10 @@ public class bpmController {
 	public String login(Model model) {
 		return "login";
 	}
+	@RequestMapping("/screen.do")
+	public String screen(Model model) {
+		return "screen";
+	}
 	/*
 	 * @RequestMapping("/signin.do") public String mainlogin(Model model) {
 	 * if(loginmember != null) { return "mainlogin"; } else { return "main"; } }

@@ -8,15 +8,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="screen.css">
-    <link rel="stylesheet" href="player.css">
+    <link rel="stylesheet" href="resources/css/screen.css">
+    <link rel="stylesheet" href="resources/css/player.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 </head>
-<script src="/jquery-3.6.0.js"></script>
+<script src="resources/js/jquery-3.6.0.js"></script>
 
 <style>
+	html{
+    background: url('resources/img/forest.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
     @font-face {
         font-family: 'BRBA_B';
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/BRBA_B.woff') format('woff');
@@ -343,8 +350,10 @@
     </div>
 
 </body>
-<script src="screen.js"></script>
-<script src="/Front/musicplayer/api/music.js"></script>
+<script src="resources/js/screen.js"></script>
+<script src="resources/js/music.js"></script>
+<script src="resources/js/screenmusic.js"></script>
+
 <script>
     
     const musicWrap = document.querySelector(".wrap__music");
@@ -373,7 +382,7 @@
         musicImg.alt = `${allMusic[num - 1].img}`;
         musicName.innerText = allMusic[num - 1].name;
         musicArtist.innerText = allMusic[num - 1].artist;
-        musicAudio.src = `/Front/musicplayer/songs/${allMusic[num - 1].audio}.mp3`;
+        musicAudio.src = `resources/songs/${allMusic[num - 1].audio}.mp3`;
     }
 
     // 플레이 버튼
