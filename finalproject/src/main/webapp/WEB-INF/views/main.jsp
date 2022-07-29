@@ -615,7 +615,7 @@
                             <div class="slideList swiper-slide">
                                 <div class="slideConBox">
                                     <p class="conNum">01</p>
-                                    <img src="resources/img/사운드벙커 2.jpg" alt="">
+                                    <img src="resources/img/select_cate.png" alt="">
                                     <div class="conText">
                                         <p class="title color">카테고리 버튼 클릭</p>
                                         <p class="con">카테고리 버튼을 클릭 시<br>카테고리 선택 화면으로 전환</p>
@@ -684,7 +684,7 @@
                             <div class="slideList swiper-slide">
                                 <div class="slideConBox">
                                     <p class="conNum">01</p>
-                                    <img src="/Front/img/사운드벙커 2.jpg" alt="">
+                                    <img src="resources/img/select_cam.png" alt="">
                                     <div class="conText">
                                         <p class="title color">캠모드 발매 솔루션</p>
                                         <p class="con">누구나 단 한번의 등록으로 원하는 날짜에 전 세계 동시<br>음원 발매가 가능해집니다.</p>
