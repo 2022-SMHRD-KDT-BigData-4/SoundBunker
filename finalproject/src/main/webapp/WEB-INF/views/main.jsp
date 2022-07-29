@@ -135,7 +135,7 @@
                         <div class="inner">
                             <!-- <a id="btn_help" href="https://service.oz-z.com/support/help" target="_blank"
                                 class="bg help">HELP</a> -->
-                            <a id="btn_signup" href="login.jsp" target="_blank"
+                            <a id="btn_signup" href="login.do" target="_blank"
                                 class="col signUp">Sign</a>
                             <a id="btn_service" href="#none" class="bg service">SERVICE</a>
                         </div>
