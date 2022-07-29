@@ -87,10 +87,11 @@ $(document).ready(function () {
             $('#cleaner').css({ "position": "relative", "left": "70%" });
             $('#book').css({ "position": "relative", "left": "70%" });
 
-           
+
             $('#more_distribution').css({ "right": "0%" })
             $('#mainBoxText1').css({ "left": "0%" })
             $('#room_slide').css({ "left": "-120%", "cursor": "initial" });
+            
 
             $('siri_ment1').css({"display":"block"});
 
@@ -133,6 +134,7 @@ $(document).ready(function () {
             $("#stop").trigger('click');
             // 비디오 감추기
             $('#video').css({"opacity":"0"});
+            
         }
         if ($(document).scrollTop() < section4.top - 200) {
             $('.nav ul li').removeClass('on');
@@ -143,8 +145,10 @@ $(document).ready(function () {
             $('#more_subscription').css({ "right": "0%" })
             $('#mainBoxText3').css({ "left": "0%" })
             $('#bpm_img').css({"left": "-70%"});
+            
+            
         }
-        if ($(document).scrollTop() > section5.top - 200) {
+        if ($(document).scrollTop() > section5.top + 200) {
             $('.nav ul li').removeClass('on');
             $('.nav .team').addClass('on')
             $('.scrollDown').css('display', 'none')
@@ -208,7 +212,7 @@ $(document).ready(function () {
 
 
 
-    //  상희 
+
     // 카테고리 모드 시작하기 눌렀을 때 기존 글씨 none & siri 발생
     $('#subText1').click(function () {
         $('#more_distribution').css({ "right": "-580%" })
@@ -227,15 +231,13 @@ $(document).ready(function () {
         $('#mainBoxText2').css({ "left": "580%" })
         $('#video').css({"opacity": "1"})
     })
-    
-    
+
     // 팀소개 자세히 보기 눌렀을 때 팀 사진과 설명 
     $('#subText3').click(function () {
         $('#more_subscription').css({ "right": "-580%" })
         $('#mainBoxText3').css({ "left": "580%" })
         $('#bpm_img').css({"left": "50%"});
     })
-
 
 
 

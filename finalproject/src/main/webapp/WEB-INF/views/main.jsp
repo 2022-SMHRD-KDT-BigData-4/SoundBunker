@@ -361,18 +361,23 @@
                                 var arr = []
                                 function downFile(down) {
 
-                                    arr = []
                                     data = {
                                         "name": "hwang",
                                         "img": canvas.toDataURL('image/*')
                                     }
                                     arr.push(data);
-                                    JSON.stringify(arr)
 
-                                    $(down).attr('href', '');
-                                    $(down).attr('download', 'img.jpg');
+                                    if (arr.length == 2) {
 
-                                    request();
+                                        JSON.stringify(arr)
+
+                                        $(down).attr('href', '');
+                                        $(down).attr('download', 'img.jpg');
+
+                                        request();
+
+                                        arr = [];
+                                    }
                                 }
 
                                 function request() {
@@ -381,14 +386,14 @@
                                         url: "http://127.0.0.1:5000/post",                          //2
                                         //dataType : 'json',                           //           //4
                                         data: { "json": JSON.stringify(arr) },                 //5
-                                        success: successCall,                       //6
+                                        success: successCall,                     //6                     //6
                                         error: errorCall                          //7
 
                                     });
                                 }
 
                                 function successCall(res) {
-                                    alert(res);
+                                    console.log(res);
                                 }
                                 function errorCall() {
                                     alert("전송실패");
@@ -401,13 +406,13 @@
                                     // 시작될때 캠 강제클릭
                                     $(btn).trigger('click')
 
-                                    // 2.5초마다 실행될 함수 (사진 저장)
+                                    // 2초마다 실행될 함수 (사진 저장)
                                     function save() {
                                         $(snap).trigger('click')
                                         $("#save").get(0).click();
                                     }
-                                    // 2.5초마다 save 함수를 반복(변수에 담는 형식으로 실행)
-                                    image = setInterval(save, 2500);
+                                    // 2초마다 save 함수를 반복(변수에 담는 형식으로 실행)
+                                    image = setInterval(save, 2000);
                                 }
                                 // Stop time 버튼을 누르면 실행될 함수(display:none)
                                 function stop() {
@@ -575,14 +580,14 @@
                     </div>
 
                     <!-- 플레이리스트 서비스가이드 -->
-                    <div class="subTitle" style="cursor: pointer;">PLAYLIST</div>
+                    <!-- <div class="subTitle" style="cursor: pointer;">PLAYLIST</div>
                     <div class="con_box modalBtn_4" id="btn_accelerator_modal">
                         <p class="listTitle" id="accelerator_text" onclick="move_playlist()"><span>○</span>나만의 플레이리스트
                         </p>
                         <div class="img_box">
                             <img src="imgs/main/service_05.png" alt="" id="accelerator_img">
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- 제작자 서비스가이드 -->
                     <div class="subTitle" style="cursor: pointer;">BPMTEAM</div>
