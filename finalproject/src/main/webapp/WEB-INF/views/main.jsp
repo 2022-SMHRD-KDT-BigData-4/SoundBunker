@@ -3,42 +3,55 @@
 <!DOCTYPE html>
 <!-- dir = ltr 은 왼쪽부터 오른쪽 방향으로 써지는 텍스트  -->
 <html lang="ko" dir="ltr">
+
 <head>
     <!-- strat : 메타 태그 -->
     <meta name="naver-site-verification" content="1d869866ce3008a0a9d02dd1acbd4775df888e32" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>SOUNDBUNKER</title>
     <link rel="shortcut icon" href="imgs/common/favicon.ico">
     <!-- end : 메타태그 -->
 
-    <link rel="stylesheet" href="css/base.css" type="text/css" />
-    <link rel="stylesheet" href="css/header.css" type="text/css" />
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
-    <link rel="stylesheet" href="css/modal.css" type="text/css" />
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- category mode player css-->
+    <link rel="stylesheet" href="resources/css/cate_player.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <!-- category mode player js-->
+
+    <link rel="stylesheet" href="resources/css/base.css" type="text/css" />
+    <link rel="stylesheet" href="resources/css/header.css" type="text/css" />
+    <link rel="stylesheet" href="resources/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="resources/css/modal.css" type="text/css" />
+    <link rel="stylesheet" href="resources/css/slick.css">
+    <link rel="stylesheet" href="resources/css/swiper.min.css">
     <!-- 카테고리 방 들어가는 section 관련 css -->
-    <link rel="stylesheet" href="/Front/temp copy/css/slider.css">
+    <link rel="stylesheet" href="resources/css/slider.css">
     <!-- 카테고리 모드 알람 css -->
-    <link rel="stylesheet" href="/Front/temp copy/css/alert_style.css">
+    <link rel="stylesheet" href="resources/css/alert_style.css">
     <!-- 알람 내 타이핑 효과 관련 css & js -->
-    <link rel="stylesheet" href="/Front/temp copy/css/typing.css">
+    <link rel="stylesheet" href="resources/css/typing.css">
     <!-- siri css -->
-    <link rel="stylesheet" href="/Front/temp copy/css/siri_style.css">
+    <link rel="stylesheet" href="resources/css/siri_style.css">
+    <!-- 캠 css -->
+    <link rel="stylesheet" href="resources/css/cam.css">
 
-
-    <script src="/jquery-3.6.0.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/slick.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <!-- 이미지 슬라이드 js -->
-    <script src="js/jquery-1.12.3.js" type="text/javascript"></script>
-    <script src="/Front/temp copy/js/slider_copy.js" defer="defer"></script>
-<link rel="stylesheet" href="/Front/img/공부.mp4">
+    <script src="resources/js/jquery-3.6.0.js"></script>
+    <script src="resources/js/common.js"></script>
+    <script src="resources/js/main.js"></script>
+    <script src="resources/js/slick.js"></script>
+    <script src="resources/js/slider.js"></script>
+    <script src="resources/js/swiper.min.js"></script>
+    <!-- 캠 js -->
+    <script src="resources/js/jquery-3.6.0.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <!---->
+    <script src="resources/js/slider_copy.js" defer="defer"></script>
+    <!-- <link rel="stylesheet" href="/Front/img/공부.mp4"> -->
     <!-- start : 백그라운드 비디오 -->
     <script>
         $(function () {
@@ -46,10 +59,10 @@
             console.log("START LOAD");
             try {
                 var videoUrl = [
-                    "/Front/img/공부.mp4",
-                    "/Front/img/요가.mov",
-                    "/Front/img/청소.mov",
-                    "/Front/img/훌라훌라.mov",
+                    "resources/img/공부.mp4",
+                    "resources/img/요가.mov",
+                    "resources/img/청소.mov",
+                    "resources/img/훌라훌라.mov",
                     // 큰형DJ "https://oz-z.com/videos/rainbow99_together,_dog.mp4",
                     "https://oz-z.com/videos/we_are_the_night_dream_catcher.mp4",
                 ];
@@ -87,7 +100,7 @@
                 <!-- logo 클릭시 새로고침 -->
                 <a href="main.html">
                     <!-- logo 이미지 -->
-                    <img src="/Front/img/logo.png" alt="logo" id="home_btn_logo" style="width: 140%;">
+                    <img src="resources/img/logo.png" alt="logo" id="home_btn_logo" style="width: 140%;">
                 </a>
             </h1>
 
@@ -122,7 +135,7 @@
                         <div class="inner">
                             <!-- <a id="btn_help" href="https://service.oz-z.com/support/help" target="_blank"
                                 class="bg help">HELP</a> -->
-                            <a id="btn_signup" href="/Front/title/login.html" target="_blank"
+                            <a id="btn_signup" href="login.jsp" target="_blank"
                                 class="col signUp">Sign</a>
                             <a id="btn_service" href="#none" class="bg service">SERVICE</a>
                         </div>
@@ -161,8 +174,67 @@
                     <!-- 카테고리 -->
                     <!-- id 설정 잘해야 스크롤 및 header 클릭시 움직임 -->
                     <div class="mainBox mainBox_02" id="category" style="background-color: rebeccapurple;">
+                        <div class="wrap__music" id="cate_player">
+                            <div class="music__inner">
+                                <div class="music__top">
+                                    <i class="material-icons">expand_more</i>
+                                    <h3>Now Playing</h3>
+                                    <i class="material-icons"> </i>
+                                </div>
+                                <!-- // music__top -->
+                                <div class="music__img">
+                                    <img src="/musicplayer/images/music-1.jpg" alt="이미지1">
+                                </div>
+                                <!-- // music__img -->
+                                <div class="music__song">
+                                    <p class="name"></p>
+                                    <p class="artist"></p>
+                                </div>
+                                <!-- // music__song -->
+                                <div class="music__progress">
+                                    <div class="bar">
+                                        <audio id="main-audio" src=""></audio>
+                                    </div>
+                                    <div class="timer">
+                                        <span class="current">0:00</span>
+                                        <span class="duration">0:00</span>
+                                    </div>
+                                </div>
+                                <!-- // music__progress -->
+                                <div class="music__control">
+                                    <i id="control-repeat" class="material-icons" title="전체 반복">repeat</i>
+                                    <i id="control-prev" class="material-icons" title="이전곡">skip_previous</i>
+                                    <div class="play-pause">
+                                        <i id="control-play" class="material-icons" title="재생">play_arrow</i>
+                                        <!-- <i class="material-icons">pause</i> -->
+                                    </div>
+                                    <i id="control-next" class="material-icons" title="다음곡">skip_next</i>
+                                    <i id="control-list" class="material-icons" title="재생목록">queue_music</i>
+                                    <!-- <i class="material-icons">repeat_one</i>
+                                    <i class="material-icons">shuffle</i> -->
+                                </div>
+                                <!-- // music__control -->
+                                <div class="music__list">
+                                    <div class="title">
+                                        <div>
+                                            <i class="material-icons queue">queue_music</i>
+                                            <span>Music List</span>
+                                        </div>
+                                        <i class="material-icons close">close</i>
+                                    </div>
+                                    <div class="list">
+                                        <ul>
+                                            <!-- Javascript -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- // music__list -->
+                            </div>
+                        </div>
+
+                        <script src="resources/js/cate_music.js"></script>
+                        <script src="resources/js/cate_player.js"></script>
                         <div class="conWrap">
-                            
                             <div class="mainBoxText" id="mainBoxText1">
                                 <span class="block">뮤직 서비스, SOUNDBUNKER</span>
                                 <span class="engText">CATEGORY</span>
@@ -176,49 +248,50 @@
                                 <div class="subText" id="subText1">시작하기</div>
                             </div>
                             <div class="imgSlide" id="room_img">
-                                <img src="/Front/img/room.png" id="room">
+                                <img src="resources/img/room.png" id="room">
                                 <div id="tablet"></div>
                                 <div id="rest"></div>
-                                <img src="/Front/img/book.png" id="book">
-                                <img src="/Front/img/cleaner.png" id="cleaner">
-                                <img src="/Front/img/dumbbell.png" id="dumbbell">
+                                <img src="resources/img/book.png" id="book">
+                                <img src="resources/img/cleaner.png" id="cleaner">
+                                <img src="resources/img/dumbbell.png" id="dumbbell">
 
-                                
-                                    
-                                  <!-- Modal content -->
-                                  <div class="modal-content" id="alert" style="display: none;">
-                                   <div id="question_1"></div>
-                                   <div id="question_2"></div>
-                                   <div id="yes">예</div>
-                                   <div id="no">아니오</div>
 
-                                      
-                                     
+
+                                <!-- Modal content -->
+                                <div class="modal-content" id="alert" style="display: none;">
+                                    <div id="question_1"></div>
+                                    <div id="question_2"></div>
+                                    <div id="yes"></div>
+                                    <div id="no"></div>
+                                    <div id="playing"></div>
+
+
+
                                     <!--  Recursion Puzzle Container   -->
                                     <!--  PUZZLE GOES INSIDE HERE   -->
                                     <div id="recursion-puzzle-container">
 
 
-                                      
-                                
+
+
                                     </div>
                                     <!--   end container   -->
-                                
-                                  </div>
-                                  <!--  end modal content  -->
-                                
+
                                 </div>
+                                <!--  end modal content  -->
+
+                            </div>
                             <div id="room_slide">
-                                <div id="siri_ment1">다음의 화면에서 아이콘을 클릭해 보세요!</div>
-                                
+                                <div id="siri_ment1">저를 클릭해 주세요!</div>
+
                                 <div id="recursionPuzzleModal" class="modal">
                                     <div class="rainbow-container">
                                         <div class="green"></div>
                                         <div class="pink"></div>
                                         <div class="blue"></div>
-                                      </div>
-                                      
-                                
+                                    </div>
+
+
 
 
                                 </div>
@@ -226,14 +299,19 @@
 
                                 <!-- The Modal -->
 
-  
-  <!-- partial -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/utils/Draggable.min.js'></script>
+
+                                <!-- partial -->
+                                <script
+                                    src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+                                <script
+                                    src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+                                <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+                                <script
+                                    src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js'></script>
+                                <script
+                                    src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js'></script>
+                                <script
+                                    src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/utils/Draggable.min.js'></script>
 
 
                             </div>
@@ -242,7 +320,7 @@
 
                         </div>
 
-                        
+
 
 
 
@@ -253,6 +331,139 @@
                     <div class="mainBox mainBox_03" id="cammode" style="background-color: lightblue;">
                         <div class="conWrap">
                             <!-- 웹캠 -->
+                            <a id="save" onclick="downFile(this)" style="display: none;">다운로드</a>
+                            <button id="btn" onclick="cameraonoff()" style="display: none;">On</button>
+                            <button id="snap" style="display: none;">캡쳐하기</button>
+                            <video id="video" width="100%" height="640" autoplay></video>
+                            <canvas id="canvas" width="640" height="480"></canvas>
+
+                            <script>
+                                var video = document.getElementById("video");
+                                var btn = document.getElementById("btn");
+                                var snap = document.getElementById("snap");
+                                var save = document.getElementById("save");
+                                // canvas 조작
+                                var canvas = document.getElementById('canvas');
+                                var context = canvas.getContext('2d');
+                                var video = document.getElementById('video');
+
+                                // 캡처 url 가져오기
+                                document.getElementById("snap").addEventListener("click", function () {
+                                    var file = canvas.toDataURL(); // 촬영한 이미지의 base64 문자열
+                                    context.drawImage(video, 0, 0, 640, 480);
+                                });
+                                // 저장 url 가져오기
+                                document.getElementById('save').addEventListener('click', function () {
+                                    event.target.href = canvas.toDataURL()
+                                });
+
+                                var isPlaying = video.srcObject;
+
+
+                                var arr = []
+                                function downFile(down) {
+
+                                    arr = []
+                                    data = {
+                                        "name": "hwang",
+                                        "img": canvas.toDataURL('image/*')
+                                    }
+                                    arr.push(data);
+                                    JSON.stringify(arr)
+
+                                    $(down).attr('href', '');
+                                    $(down).attr('download', 'img.jpg');
+
+                                    request();
+                                }
+
+                                function request() {
+                                    $.ajax({
+                                        type: "POST",                               //1
+                                        url: "http://127.0.0.1:5000/post",                          //2
+                                        //dataType : 'json',                           //           //4
+                                        data: { "json": JSON.stringify(arr) },                 //5
+                                        success: successCall,                       //6
+                                        error: errorCall                          //7
+
+                                    });
+                                }
+
+                                function successCall(res) {
+                                    alert(res);
+                                }
+                                function errorCall() {
+                                    alert("전송실패");
+                                }
+                                // 반복 함수를 담을 객체 생성   
+                                let image;
+
+                                // 'subText2(캠모드 - 시작하기)' 버튼을 누르면 실행될 함수
+                                function start() {
+                                    // 시작될때 캠 강제클릭
+                                    $(btn).trigger('click')
+
+                                    // 2.5초마다 실행될 함수 (사진 저장)
+                                    function save() {
+                                        $(snap).trigger('click')
+                                        $("#save").get(0).click();
+                                    }
+                                    // 2.5초마다 save 함수를 반복(변수에 담는 형식으로 실행)
+                                    image = setInterval(save, 2500);
+                                }
+                                // Stop time 버튼을 누르면 실행될 함수(display:none)
+                                function stop() {
+                                    // image의 반복실행을 종료한다.
+                                    clearInterval(image);
+                                }
+
+                                function cameraonoff() {
+                                    if (!isPlaying) {
+                                        cameraon();
+                                    } else {
+                                        cameraoff();
+                                    }
+                                }
+
+                                function cameraon() {
+                                    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                                        navigator.mediaDevices
+                                            .getUserMedia({
+                                                video: true
+                                            })
+                                            .then(function (stream) {
+                                                video.srcObject = stream;
+                                                console.log('video start')
+                                                video.play();
+                                            })
+                                            .then(() => {
+                                                isPlaying = true;
+                                                console.log('text change off')
+                                                btn.innerText = "Off";
+                                            });
+                                    }
+                                }
+
+                                function cameraoff() {
+                                    const stream = video.srcObject;
+                                    if (stream) {
+                                        const tracks = stream.getTracks();
+
+                                        tracks.forEach(function (track) {
+                                            console.log('video stop')
+                                            track.stop();
+                                        });
+
+                                        video.srcObject = null;
+                                        isPlaying = false;
+                                        console.log('text change on')
+                                        btn.innerText = "On";
+                                    }
+                                }
+                            </script>
+                            <!-- 웹캠 끝 -->
+
+
                             <div class="mainBoxText" id="mainBoxText2">
                                 <span class="block">뮤직 서비스, SOUNDBUNKER</span>
                                 <span class="engText">CAMMODE</span>
@@ -263,8 +474,14 @@
                                     향하는 <span>마케팅</span>이<br>
                                     시작됩니다.
                                 </div>
-                                <div class="subText" id="subText2">자세히 보기</div>
-                            </div>
+                                <script>
+
+
+                                </script>
+                                <div class="subText" id="subText2" onclick="start()">자세히 보기</div>
+
+                            </div><button onclick="stop()" id="stop" style="display: none;">Stop time</button>
+
                         </div>
                     </div>
 
@@ -307,7 +524,7 @@
                     </div>
                     <div class="footer">
                         <div class="inner">
-                            <div class="logo"><a href="index.html"><img src="/Front/img/logo.png" alt="logo"></a>
+                            <div class="logo"><a href="index.html"><img src="resources/img/logo.png" alt="logo"></a>
                             </div>
                             <div class="contents">
                                 <div class="link">
@@ -379,18 +596,20 @@
                     </div>
 
                     <!-- 플레이리스트 서비스가이드 -->
-                    <div class="subTitle"  style="cursor: pointer;">PLAYLIST</div>
+                    <div class="subTitle" style="cursor: pointer;">PLAYLIST</div>
                     <div class="con_box modalBtn_4" id="btn_accelerator_modal">
-                        <p class="listTitle" id="accelerator_text" onclick="move_playlist()"><span>○</span>나만의 플레이리스트</p>
+                        <p class="listTitle" id="accelerator_text" onclick="move_playlist()"><span>○</span>나만의 플레이리스트
+                        </p>
                         <div class="img_box">
                             <img src="imgs/main/service_05.png" alt="" id="accelerator_img">
                         </div>
                     </div>
 
                     <!-- 제작자 서비스가이드 -->
-                    <div class="subTitle"  style="cursor: pointer;">BPMTEAM</div>
+                    <div class="subTitle" style="cursor: pointer;">BPMTEAM</div>
                     <div class="con_box modalBtn_5" id="btn_subscription_modal">
-                        <p class="listTitle" id="subscription_text" onclick="move_team()"><span>○</span>Bunker PlayList Manager</p>
+                        <p class="listTitle" id="subscription_text" onclick="move_team()"><span>○</span>Bunker PlayList
+                            Manager</p>
                         <div class="img_box">
                             <img src="imgs/main/service_07.png" alt="" id="subscription_img">
                         </div>
@@ -519,7 +738,8 @@
                                 <div class="subBoxText">
                                     <p class="title color">음악 캠모드</p>
                                     <p class="con">밑에 클릭</p>
-                                        <div id="btn_go_mv" class="go catego" style="cursor: pointer;" onclick="move_cammode()">GO</div>
+                                    <div id="btn_go_mv" class="go catego" style="cursor: pointer;"
+                                        onclick="move_cammode()">GO</div>
                                 </div>
                             </div>
                             <div class="slideList swiper-slide">
@@ -537,10 +757,11 @@
                     </div>
                 </div>
             </div>
-    <!-- end of :: contents -->
-    </div>
-    <!-- end : 메인 전체-->
-    
+
+            <!-- end of :: contents -->
+        </div>
+        <!-- end : 메인 전체-->
+
 </body>
 
 </html>
