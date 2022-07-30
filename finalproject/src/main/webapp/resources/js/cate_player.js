@@ -21,7 +21,6 @@
         
         // 음악 재생
         function loadMusic(num) {
-            musicImg.alt = `${allMusic[num - 1].img}`;
             musicName.innerText = allMusic[num - 1].name;
             musicArtist.innerText = allMusic[num - 1].artist;
             musicAudio.src = `resources/songs/${allMusic[num - 1].audio}.mp3`;
