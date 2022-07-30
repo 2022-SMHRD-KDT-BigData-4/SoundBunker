@@ -675,11 +675,11 @@
                 </div>
             </div>
 
-            <!-- 2번째 가이드 안 -->
+             <!-- 2번째 가이드 안 -->
             <div class="mainBox3_modal sub_modal modal_box">
                 <div class="inner">
                     <a id="btn_close_distribution" href="#none" class="close modalClose">BACK</a>
-                    <div class="slideWrap3 slideWrap swiper-container2">
+                    <div class="slideWrap3 slideWrap swiper-container3">
                         <div class="swiper-wrapper">
                             <div class="slideList swiper-slide">
                                 <div class="mainBoxText">
@@ -688,7 +688,7 @@
                                 </div>
                                 <div class="subBoxText">
                                     <p class="title color">캠모드<br>설명서</p>
-                                    <p class="con">누구나 간편하게<br>사용할 수 있는 카테고리</p>
+                                    <p class="con">누구나 간편하게<br>사용할 수 있는 캠모드</p>
                                 </div>
                             </div>
                             <div class="slideList swiper-slide">
@@ -696,28 +696,28 @@
                                     <p class="conNum">01</p>
                                     <img src="resources/img/select_cam.png" alt="">
                                     <div class="conText">
-                                        <p class="title color">캠모드 발매 솔루션</p>
-                                        <p class="con">누구나 단 한번의 등록으로 원하는 날짜에 전 세계 동시<br>음원 발매가 가능해집니다.</p>
+                                        <p class="title color">cammode 클릭</p>
+                                        <p class="con">cammode를 클릭하여 해당 모드로 손쉽게 이동합니다.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="slideList swiper-slide">
                                 <div class="slideConBox">
                                     <p class="conNum">02</p>
-                                    <img src="/Front/img/사운드벙커 5-2.jpg" alt="">
+                                    <img src="resources/img/camstart.png" alt="" style="height: 459px;">
                                     <div class="conText">
-                                        <p class="title color">캠 모드 동시 발매</p>
-                                        <p class="con">전 세계 92개 국가에서, 당신의 음악을 만날 수 있습니다.</p>
+                                        <p class="title color">시작하기</p>
+                                        <p class="con">시작하기를 누른다.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="slideList swiper-slide">
                                 <div class="slideConBox">
                                     <p class="conNum">03</p>
-                                    <img src="https://www.oz-z.com/imgs/main/slideWrap2_img_02.png" alt="">
+                                    <img src="resources/img/cam_on.png" alt="" style="height: 459px;">
                                     <div class="conText">
-                                        <p class="title color">캠모드로 음악을을 들어요</p>
-                                        <p class="con">시작해볼까요?</p>
+                                        <p class="title color">캠 자동 실행</p>
+                                        <p class="con">몇 초 동안 움직임을 감지되면 자동으로 음악이 실행됩니다.</p>
                                     </div>
                                 </div>
                             </div>
@@ -726,23 +726,20 @@
                                 </div>
                                 <div class="subBoxText">
                                     <p class="title color">음악 캠모드</p>
-                                    <p class="con">밑에 클릭</p>
-                                    <div id="btn_go_mv" class="go catego" style="cursor: pointer;"
-                                        onclick="move_cammode()">GO</div>
                                 </div>
                             </div>
                             <div class="slideList swiper-slide">
                                 <div class="slideConBox">
                                     <p class="conNum">04</p>
-                                    <img src="https://www.oz-z.com/imgs/main/slideWrap2_img_03.png" alt="">
+                                    <img src="resources/img/screen_saber.png" alt="" style="width: 485px; height:459px;">
                                     <div class="conText">
-                                        <p class="title color">온라인 카테고리시스템</p>
-                                        <p class="con">실시간으로 클릭 <br>노래 재생할수 있음</p>
+                                        <p class="title color">스크린 세이버</p>
+                                        <p class="con">스크린 세이버를 이용하여 모니터 화면을 인테리어 효과를 낼 수 있습니다.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-pagination2 sPage"></div>
+                        <div class="swiper-pagination3 sPage"></div>
                     </div>
                 </div>
             </div>
@@ -750,7 +747,6 @@
             <!-- end of :: contents -->
         </div>
         <!-- end : 메인 전체-->
-
 </body>
 
 </html>
