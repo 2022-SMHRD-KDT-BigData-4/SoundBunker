@@ -17,6 +17,6 @@
     </select>
     <select id="playMusic" resultType="com.smhrd.domain.Music">
         select * from test_music
-    </select>
+    </select> 
     
 </mapper>
