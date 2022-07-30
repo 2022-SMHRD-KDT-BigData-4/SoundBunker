@@ -49,10 +49,14 @@
     <!-- 캠 js -->
     <script src="resources/js/jquery-3.6.0.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    
     <!---->
     <script src="resources/js/slider_copy.js" defer="defer"></script>
     <!-- <link rel="stylesheet" href="/Front/img/공부.mp4"> -->
     <!-- start : 백그라운드 비디오 -->
+    <!-- 카테고리 모드 js 소스  -->
+    <script src="resources/js/cate_ajax.js"></script>
+    
     <script>
         $(function () {
             $(this).scrollTop(0);
@@ -163,7 +167,7 @@
                                 다음은 <span>SoundBunker</span>가<br>
                                 할게요.
                             </div>
-                            <div class="serviceSlot">l
+                            <div class="serviceSlot">
                             </div>
                         </div>
                     </div>
@@ -171,6 +175,7 @@
                     <!-- 메인 -->
                     <!-- 카테고리 -->
                     <!-- id 설정 잘해야 스크롤 및 header 클릭시 움직임 -->
+                    
                     <div class="mainBox mainBox_02" id="category" style="background-color: rebeccapurple;">
                         <div class="wrap__music" id="cate_player">
                             <div class="music__inner">
@@ -240,7 +245,7 @@
                             <div class="mainBoxSubText modalBtn_2 modal_btn" id="more_distribution">
                                 <div class="textWrap" id="textWrap1">
                                     듣고 싶은 음악을<br>
-                                    <span>직접</span>골라 <span>편의하게</span><br>
+                                    <span>직접</span>골라 <span>편리하게</span><br>
                                     감상해 보세요.
                                 </div>
                                 <div class="subText" id="subText1">시작하기</div>
@@ -523,9 +528,9 @@
                                         target="_blank">사업자정보</a>
                                 </div>
                                 <p class="footer_copy">
-                                    마운드미디어(주) 대표이사 신동익 <br>
-                                    주소: 서울특별시 강남구 강남대로 302, 3층(역삼동, 동희빌딩) | 사업자등록번호: 105-88-05268<br>
-                                    통신판매업신고번호: 2022-서울강남-00989
+                                    BPM 대표이사 한서영 <br>
+                                    주소: 광주광역시 첨단 첨단대로 302, 3층(월계동, 교보빌딩) | 사업자등록번호: 122-88-014248<br>
+                                    통신판매업신고번호: 212-광주첨단-00989
                                 </p>
                             </div>
 
