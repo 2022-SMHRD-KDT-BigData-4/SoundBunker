@@ -62,7 +62,7 @@
             $(this).scrollTop(0);
             console.log("START LOAD");
             try {
-                var videoUrl = [
+                var videoUrl = [ 
                     "resources/img/공부.mp4",
                     "resources/img/요가.mov",
                     "resources/img/청소.mov",
