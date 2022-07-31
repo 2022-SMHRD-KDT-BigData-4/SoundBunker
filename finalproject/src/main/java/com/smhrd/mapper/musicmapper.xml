@@ -2,21 +2,24 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.mapper.musicmapper">
     
-    <insert id="musicInsert" parameterType="com.smhrd.domain.Music">
-        insert into music(song_id, song_title, artist, playtime, skeleton, category, weather, song_genre)
-        values(#{song_id}, #{song_title}, #{artist}, #{playtime}, #{skeleton}, #{category}, #{weather}, #{song_genre})
-    </insert>
-	<select id="musicSelect" parameterType="String">
-	    select * from music where sing_id=#{song_id}
-	</select>    
-    <select id="musicRecommend" parameterType="String">
-        select * from music where  category=#{category} 
+    
+    <select id="randRMusic" resultType="com.smhrd.domain.Music">
+        select * from t_music where m_category = 'r' order by rand() limit 3 
     </select>
-    <select id="randMusic" parameterType="String">
-        select * from t_music where musictag =#{musictag}  order by rand() limit 3 
+    <select id="randSMusic" resultType="com.smhrd.domain.Music">
+        select * from test_music where song_category = 's' order by rand() limit 3 
     </select>
-    <select id="playMusic" resultType="com.smhrd.domain.Music">
-        select * from test_music
-    </select> 
+    <select id="randWMusic" resultType="com.smhrd.domain.Music">
+        select * from test_music where song_category = 'w' order by rand() limit 3 
+    </select>
+    <select id="randEMusic" resultType="com.smhrd.domain.Music">
+        select * from t_music where m_category = 'e' order by rand() limit 3 
+    </select>
+    <select id="randHMusic" resultType="com.smhrd.domain.Music">
+        select * from t_music where m_category = 'h' order by rand() limit 3 
+    </select>
+
+ 
+	
     
 </mapper>

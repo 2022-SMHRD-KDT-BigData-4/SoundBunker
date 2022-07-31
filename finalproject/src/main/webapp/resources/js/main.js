@@ -308,6 +308,9 @@ $(document).ready(function () {
         document.getElementById('playing').innerHTML = "";
         document.getElementById('yes').innerHTML = "예";
         document.getElementById('no').innerHTML = "아니오";
+
+        studyajax()
+        
         // 애니메이션 초기화
         target.classList.remove("effect2");
         target.classList.remove("effect");
@@ -373,6 +376,8 @@ $(document).ready(function () {
         document.getElementById('playing').innerHTML = "";
         document.getElementById('yes').innerHTML = "예";
         document.getElementById('no').innerHTML = "아니오";
+
+        workajax()
         // 애니메이션 초기화
         target.classList.remove("effect2");
         target.classList.remove("effect");

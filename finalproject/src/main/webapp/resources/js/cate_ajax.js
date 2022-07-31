@@ -1,28 +1,51 @@
 var mdata;
-$(document).ready(() => {
-	
-	// ajax통신, 글데이터 가져오기
+
+function workajax(){
 	$.ajax({
-		url: 'MusicList.do', // 어디로 요청을 보낼 것인가? 
-		type: 'post', //get?, post?
+		url: 'WMusicList.do', 
+		type: 'post', 
+		headers: { 'Pragma': 'no-cache' },
+		cache: false,
 		success: function (data) {
 
 			mdata = data;
 
-			//for(let i = 0; i<=mdata.length; i++){
-            //localStorage.setItem('mtitle' , mdata[i].song_title);
-			//localStorage.setItem('martist' , mdata[i].artist);
 			localStorage.setItem('mdata', JSON.stringify(mdata));
 			console.log('ajax:',mdata)
 			console.log(JSON.stringify(mdata))
-			//}
-			
+			alert('work합격')
 			
 			},
 		error: function (data) {
-			// 404,405,500 --> 요청자체가 실패
-			// e--> 어떤 에러인지 담기는 변수
 			alert('error');
 		}
 	})
-})
+}
+
+function studyajax(){
+	$.ajax({
+		url: 'SMusicList.do', 
+		type: 'post', 
+		headers: { 'Pragma': 'no-cache' },
+		cache: false,
+		success: function (data) {
+
+			mdata = data;
+
+			localStorage.setItem('mdata', JSON.stringify(mdata));
+			console.log('ajax:',mdata)
+			console.log(JSON.stringify(mdata))
+			
+			alert('study합격')
+			},
+		error: function (data) {
+			alert('error');
+		}
+	})
+}
+
+function deleteAllCookies() {
+ var c = document.cookie.split("; ");
+ for (i in c)
+  document.cookie =/^[^=]+/.exec(c[i])[0]+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+}

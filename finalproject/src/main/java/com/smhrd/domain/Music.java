@@ -22,7 +22,7 @@ public class Music {
 	@NonNull
 	private char song_category;
 	@NonNull
-	private String song_repo;
+	private String repo;
 
 	
 	

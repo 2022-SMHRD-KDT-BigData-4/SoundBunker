@@ -9,15 +9,14 @@ import com.smhrd.domain.Music;
 
 public interface musicmapper{
 	
-	public int musicInsert(Music vo);
 	
-	public Music musicSelect(String song_id);
+	public List<Music> randRMusic();
+	public List<Music> randSMusic();
+	public List<Music> randWMusic();
+	public List<Music> randEMusic();
+	public List<Music> randHMusic();
 	
-	public List<Music> musicRecommend(Music vo);
 	
-	public List<Music> randMusic(String musictag);
-	
-	public List<Music> playMusic();
 	
 }
 	
