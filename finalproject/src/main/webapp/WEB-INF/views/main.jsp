@@ -13,7 +13,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>SOUNDBUNKER</title>
-    <link rel="shortcut icon" href="imgs/common/favicon.ico">
     <!-- end : 메타태그 -->
 
     <!-- category mode player css-->

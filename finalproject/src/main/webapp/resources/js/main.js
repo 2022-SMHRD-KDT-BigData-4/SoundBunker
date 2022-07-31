@@ -310,7 +310,6 @@ $(document).ready(function () {
         document.getElementById('no').innerHTML = "아니오";
 
         studyajax()
-        
         // 애니메이션 초기화
         target.classList.remove("effect2");
         target.classList.remove("effect");
@@ -354,7 +353,7 @@ $(document).ready(function () {
         document.getElementById('playing').innerHTML = "";
         document.getElementById('yes').innerHTML = "예";
         document.getElementById('no').innerHTML = "아니오";
-
+		
         // 애니메이션 초기화
         target.classList.remove("effect2");
         target.classList.remove("effect");
@@ -420,7 +419,6 @@ $(document).ready(function () {
         document.getElementById('siri_ment1').innerHTML = "";
         document.getElementById('playing').innerHTML = "이런 노래는 어떠세요?";
         target.classList.add("effect2");
-
         $('#recursionPuzzleModal').css({
             "top": "-4%", "transition-property": "top",
             "transition-duration": "1s",

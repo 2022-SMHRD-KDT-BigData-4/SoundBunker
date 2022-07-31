@@ -1,14 +1,13 @@
-//var songTitle = localStorage.getItem('mtitle')
-//var songArtist = localStorage.getItem('martist')
-var songData = localStorage.getItem('mdata')
+
+var songData = sessionStorage.mdata
 var lastData = JSON.parse(songData)
-// console.log(lastData[0].song_title)
+
 
 
 var testMusic = []
 
 for(idx in lastData) {
-
+	
     testMusic[idx] = [
         {
             name : (idx, lastData[idx].song_title),

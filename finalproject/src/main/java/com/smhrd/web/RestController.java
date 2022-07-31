@@ -8,6 +8,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,7 +27,7 @@ public class RestController {
 	
 	@RequestMapping("/RMusicList.do")
 	public List<Music> RMusicList() {
-
+		
 		List<Music> restList = mapper.randRMusic();
 	
 		return  restList;
@@ -33,7 +36,7 @@ public class RestController {
 	
 	@RequestMapping("/SMusicList.do")
 	public List<Music> SMusicList() {
-	
+		
 		List<Music> studyList = mapper.randSMusic();
 	
 		
@@ -46,8 +49,9 @@ public class RestController {
 	@RequestMapping("/WMusicList.do")
 	public List<Music> WMusicList() {
 		
+		
 		List<Music> workList = mapper.randWMusic();
-		System.out.println("hi");
+
 		return  workList;
 	}
 	
