@@ -314,6 +314,7 @@ img#bpm_img {
     font-size: 1.6em;
     font-weight: 700;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .scrollDown {

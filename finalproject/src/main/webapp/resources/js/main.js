@@ -120,7 +120,7 @@ $(document).ready(function () {
             
 
         } //캠모드
-        if ($(document).scrollTop() > section4.top - 200) {
+        if ($(document).scrollTop() > section4.top - 180) {
             $('.nav ul li').removeClass('on');
             $('.nav .playlist').addClass('on')
             $('.scrollDown').css('display', 'block')
@@ -220,7 +220,7 @@ $(document).ready(function () {
         $('#room_slide').css({ "left": "15%", "cursor": "pointer" });
         $('#category').css({"background" : "url(https://www.oz-z.com/imgs/main/modal_bg2.png) 0 0 no-repeat", "background-size" : "cover"});
         $('#siri_ment1').css({"display":"block"});
-        
+        $('#rest').css({"display":"block"});
     })
 
     
@@ -285,6 +285,7 @@ $(document).ready(function () {
         document.getElementById('playing').innerHTML = "";
         document.getElementById('yes').innerHTML = "예";
         document.getElementById('no').innerHTML = "아니오";
+        Exerciseajax()
         // 애니메이션 초기화
         target.classList.remove("effect2");
         target.classList.remove("effect");
@@ -309,7 +310,7 @@ $(document).ready(function () {
         document.getElementById('yes').innerHTML = "예";
         document.getElementById('no').innerHTML = "아니오";
 
-        studyajax()
+        Studyajax()
         // 애니메이션 초기화
         target.classList.remove("effect2");
         target.classList.remove("effect");
@@ -332,6 +333,7 @@ $(document).ready(function () {
         document.getElementById('playing').innerHTML = "";
         document.getElementById('yes').innerHTML = "예";
         document.getElementById('no').innerHTML = "아니오";
+        Houseworkajax()
         // 애니메이션 초기화
         target.classList.remove("effect2");
         target.classList.remove("effect");
@@ -353,7 +355,7 @@ $(document).ready(function () {
         document.getElementById('playing').innerHTML = "";
         document.getElementById('yes').innerHTML = "예";
         document.getElementById('no').innerHTML = "아니오";
-		
+		Restajax()
         // 애니메이션 초기화
         target.classList.remove("effect2");
         target.classList.remove("effect");
@@ -376,7 +378,7 @@ $(document).ready(function () {
         document.getElementById('yes').innerHTML = "예";
         document.getElementById('no').innerHTML = "아니오";
 
-        workajax()
+        Workajax()
         // 애니메이션 초기화
         target.classList.remove("effect2");
         target.classList.remove("effect");
@@ -428,6 +430,10 @@ $(document).ready(function () {
             "top": "46%", "transition-property": "top",
             "transition-duration": "1s"
         });
+        $.getScript("resources/js/cate_music.js");
+        console.log("1번")
+		$.getScript("resources/js/cate_player.js");
+		console.log("2번")
     })
 
 

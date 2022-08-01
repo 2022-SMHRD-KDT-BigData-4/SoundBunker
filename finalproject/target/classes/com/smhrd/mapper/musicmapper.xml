@@ -4,19 +4,19 @@
     
     
     <select id="randRMusic" resultType="com.smhrd.domain.Music">
-        select * from t_music where m_category = 'r' order by rand() limit 3 
+        select * from t_music where m_category = 'r' order by rand() limit 5 
     </select>
     <select id="randSMusic" resultType="com.smhrd.domain.Music">
-        select * from test_music where song_category = 's' order by rand() limit 3 
+        select * from t_music where m_category = 's' order by rand() limit 5 
     </select>
     <select id="randWMusic" resultType="com.smhrd.domain.Music">
-        select * from test_music where song_category = 'w' order by rand() limit 3 
+        select * from t_music where m_category = 'w' order by rand() limit 5 
     </select>
     <select id="randEMusic" resultType="com.smhrd.domain.Music">
-        select * from t_music where m_category = 'e' order by rand() limit 3 
+        select * from t_music where m_category = 'e' order by rand() limit 5 
     </select>
     <select id="randHMusic" resultType="com.smhrd.domain.Music">
-        select * from t_music where m_category = 'h' order by rand() limit 3 
+        select * from t_music where m_category = 'h' order by rand() limit 5 
     </select>
 
  

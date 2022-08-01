@@ -34,9 +34,10 @@
     padding: 25px 30px;
     overflow: hidden;
     position: relative;
-    border-radius: 15px;
+    border-radius: 15px;		
     background: var(--white);
     box-shadow: 0 6px 15px var(--lightshadow);
+    margin-top: 15%;
 }
 
 .music__top {
