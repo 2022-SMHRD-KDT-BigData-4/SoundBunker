@@ -1,9 +1,9 @@
 
 var songData = sessionStorage.mdata
-var lastData = JSON.parse(songData)
-var camData = localStorage.getItem('cam')
+console.log("송데이터"+songData)
 
-console.log('[cate_music.js]:', localStorage.getItem('cam')) 
+var lastData = JSON.parse(songData)
+console.log("라스트데이터"+songData)
 
 var testMusic = []
 
@@ -22,6 +22,8 @@ for(idx in lastData) {
 var allMusic = [].concat.apply([], testMusic);
 
 sessionStorage.setItem('allMusic2', JSON.stringify(allMusic));
+
+
 
 
 

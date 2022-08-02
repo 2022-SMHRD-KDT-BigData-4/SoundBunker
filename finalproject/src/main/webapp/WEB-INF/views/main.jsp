@@ -332,6 +332,7 @@
                      <a id="save" onclick="downFile(this)" style="display: none;">다운로드</a>
                      <button id="btn" onclick="cameraonoff()" style="display: none;">On</button>
                      <button id="snap" style="display: none;">캡쳐하기</button>
+                     <div id="noti"style="font-size: 50px; position: inherit; left:-20%; top:42%; display: none; color: white; font-weight: 700">Welcome</div>
                      <video id="video" width="100%" height="640" autoplay></video>
                      <canvas id="canvas" width="640" height="480"></canvas>
 
@@ -406,7 +407,7 @@
                                
                                 function successCall(res) {
                                     console.log(res);
-                                    
+                                    $('#noti').text(res+'중입니다.')
                                       var resultList= []
 
                                 
@@ -453,6 +454,7 @@
                                             
                                             localStorage.setItem('cam',JSON.stringify(data));
                                             preresult = 's';
+
                                          },
                                         error: 
                                            console.log('안 들어와뜸')//7
@@ -533,6 +535,7 @@
                                             console.log("[main.jsp]:", mData)
                                             localStorage.setItem('cam',JSON.stringify(data));
                                             preresult = 'e';
+                                            //window.open('screen.do','_self')
                                          },
                                         error: 
                                            console.log('안 들어와뜸')//7

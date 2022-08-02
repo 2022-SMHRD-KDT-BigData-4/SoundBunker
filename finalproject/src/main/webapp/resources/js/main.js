@@ -230,6 +230,7 @@ $(document).ready(function () {
         $('#more_marketing').css({ "right": "-580%" })
         $('#mainBoxText2').css({ "left": "580%" })
         $('#video').css({"opacity": "1"})
+        $('#noti').css({"display": "block"})
     })
 
     // 팀소개 자세히 보기 눌렀을 때 팀 사진과 설명 
@@ -328,7 +329,7 @@ $(document).ready(function () {
     $('#cleaner').click(function () {
         $('#cate_player').css({"display" : "none"})
         const target = document.getElementById('alert');
-        document.getElementById('question_1').innerHTML = "독서 관련 아이콘을 클릭하셨습니다";
+        document.getElementById('question_1').innerHTML = "청소 관련 아이콘을 클릭하셨습니다";
         document.getElementById('question_2').innerHTML = "플레이리스트를 재생할까요?";
         document.getElementById('playing').innerHTML = "";
         document.getElementById('yes').innerHTML = "예";

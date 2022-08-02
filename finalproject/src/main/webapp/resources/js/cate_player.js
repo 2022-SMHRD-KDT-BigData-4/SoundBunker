@@ -16,8 +16,8 @@
         var musicListUl = musicList.querySelector(".list ul");
     
         var musicIndex = 1;
-    	console.log("넘겨받은데이터 : ",localStorage.getItem('test'))
     	var allMusic2 = JSON.parse(sessionStorage.allMusic2) 
+    	console.log("올뮤직"+allMusic2)
         loadMusic(1);
         // 음악 재생
         function loadMusic(num) {

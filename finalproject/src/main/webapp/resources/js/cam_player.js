@@ -16,16 +16,16 @@
         var musicListUl = musicList.querySelector(".list ul");
     
         var musicIndex = 1;
-    	console.log("넘겨받은데이터 : ",localStorage.getItem('cam'))
-    	var cam= JSON.parse(sessionStorage.cam) 
+    	var allMusic2 = JSON.parse(localStorage.allMusic2) 
+    	console.log("올뮤직"+allMusic2)
         loadMusic(1);
         // 음악 재생
         function loadMusic(num) {
-       		console.log("데이터", cam)
+       		console.log("데이터", allMusic2)
         	var musicName = musicWrap.querySelector(".music__song .name");
-            musicName.innerText = cam[num - 1].name;
-            musicArtist.innerText = cam[num - 1].artist;
-            musicAudio.src = `resources/songs/${cam[num - 1].audio}.mp3`;
+            musicName.innerText = allMusic2[num - 1].name;
+            musicArtist.innerText = allMusic2[num - 1].artist;
+            musicAudio.src = `resources/songs/${allMusic2[num - 1].audio}.mp3`;
         }
     
         // 플레이 버튼
@@ -46,7 +46,7 @@
         // 이전 곡 듣기 버튼
         function prevMusic() {
             musicIndex--;
-            musicIndex < 1 ? musicIndex = cam.length : musicIndex = musicIndex;
+            musicIndex < 1 ? musicIndex = allMusic2.length : musicIndex = musicIndex;
             loadMusic(musicIndex);
             playMusic();
             playListMusic();
@@ -55,7 +55,7 @@
         // 다음 곡 듣기 버튼
         function nextMusic() {
             musicIndex++;
-            musicIndex > cam.length ? musicIndex = 1 : musicIndex = musicIndex;
+            musicIndex > allMusic2.length ? musicIndex = 1 : musicIndex = musicIndex;
             loadMusic(musicIndex);
             playMusic();
             playListMusic();
@@ -103,9 +103,11 @@
         })
     
         musicPrevBtn.addEventListener("click", () => {
+        location.reload();
             prevMusic();
         });
         musicNextBtn.addEventListener("click", () => {
+        location.reload();
             nextMusic();
         });
     
@@ -127,6 +129,7 @@
                     break;
     
                 case "shuffle":
+                
                     musicRepeat.innerText = "repeat";
                     musicRepeat.setAttribute("title", "전체 반복")
                     playListMusic();
@@ -140,18 +143,22 @@
     
             switch (getText) {
                 case "repeat":
+                location.reload();
                     nextMusic();
                     break;
     
+                    
                 case "repeat_one":
+                location.reload();
                     loadMusic(musicIndex);
                     playMusic();
                     break;
     
                 case "shuffle":
-                    let randIndex = Math.floor((Math.random() * cam.length) + 1);
+                location.reload();
+                    let randIndex = Math.floor((Math.random() * allMusic2.length) + 1);
                     do {
-                        randIndex = Math.floor((Math.random() * cam.length) + 1);
+                        randIndex = Math.floor((Math.random() * allMusic2.length) + 1);
                     } while (musicIndex == randIndex);
                     musicIndex = randIndex;
                     loadMusic(musicIndex);
@@ -171,21 +178,21 @@
         })
     
         // 뮤직 리스트 구현하기
-        // for (let i = 0; i < cam.length; i++) {
+        // for (let i = 0; i < allMusic2.length; i++) {
         //     let li = `
         //             <li data-index="${i + 1}">
         //                 <div>
-        //                     <em>${cam[i].name}</em>
-        //                     <p>${cam[i].artist}</p>
+        //                     <em>${allMusic2[i].name}</em>
+        //                     <p>${allMusic2[i].artist}</p>
         //                 </div>
-        //                 <audio class="${cam[i].audio}" src="resources/songs/${cam[i].audio}.mp3"></audio>
-        //                 <span id="${cam[i].audio}" class="audio-duration">3:36</span>
+        //                 <audio class="${allMusic2[i].audio}" src="resources/songs/${allMusic2[i].audio}.mp3"></audio>
+        //                 <span id="${allMusic2[i].audio}" class="audio-duration">3:36</span>
         //             </li>
         //         `;
         //     musicListUl.insertAdjacentHTML("beforeend", li);
     
-        //     let liAudioDuration = musicListUl.querySelector(`#${cam[i].audio}`);
-        //     let liAudio = musicListUl.querySelector(`.${cam[i].audio}`);
+        //     let liAudioDuration = musicListUl.querySelector(`#${allMusic2[i].audio}`);
+        //     let liAudio = musicListUl.querySelector(`.${allMusic2[i].audio}`);
     
         //     liAudio.addEventListener("loadeddata", () => {
         //         let audioDuration = liAudio.duration;
